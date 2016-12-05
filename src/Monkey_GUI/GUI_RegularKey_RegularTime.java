@@ -111,7 +111,7 @@ public class GUI_RegularKey_RegularTime extends JFrame implements Runnable{
 		SeleFolder.setForeground(new Color(0x43,0x6E,0xEE));
 		userJPanel.add(SeleFolder);
 
-		SeleFolder1 = new JLabel("请选择文件夹：");
+		SeleFolder1 = new JLabel("选择文件夹：");
 		SeleFolder1.setBounds(boundsuserJPanel.width / 50,
 				boundsuserJPanel.height / 20, boundsuserJPanel.width / 3,
 				boundsuserJPanel.height / 12);
@@ -150,10 +150,10 @@ public class GUI_RegularKey_RegularTime extends JFrame implements Runnable{
 		Port.setForeground(new Color(0x43,0x6E,0xEE));
 		userJPanel.add(IP);
 		userJPanel.add(Port);
-		IP1 = new JLabel("请输入盒子IP :");
+		IP1 = new JLabel("盒子IP :");
 		IP1.setBounds(boundsuserJPanel.width / 50, IP_Portbounds.y,
 				boundsuserJPanel.width / 3, boundsuserJPanel.height / 12);
-		IP2 = new JLabel(" 端口: ");
+		IP2 = new JLabel("端口: ");
 		IP2.setBounds((boundsuserJPanel.width / 3) * 2, IP_Portbounds.y,
 				boundsuserJPanel.width / 6, boundsuserJPanel.height / 12);
 		IP1.setFont(new Font("楷体", Font.BOLD, boundsuserJPanel.height / 20));
@@ -547,7 +547,7 @@ public class GUI_RegularKey_RegularTime extends JFrame implements Runnable{
 		LoopCount1.setFont(new Font("楷体", Font.BOLD,
 				boundsuserJPanel1.height / 20));
 		LoopCount1.setForeground(new Color(0x57,0x57,0x57));
-		LoopCount2 = new JLabel("请填正整数，填0为无限循环");
+		LoopCount2 = new JLabel("请填正整数，0为无限循环");
 		LoopCount2.setBounds((boundsuserJPanel1.width / 3)
 				+ (boundsuserJPanel1.width / 10),
 				boundsuserJPanel1.height / 20,
@@ -570,7 +570,7 @@ public class GUI_RegularKey_RegularTime extends JFrame implements Runnable{
 				boundsuserJPanel1.height / 25));
 		LoopTime.setForeground(new Color(0x43,0x6E,0xEE));
 		userJPanel1.add(LoopTime);
-		LoopTime1 = new JLabel("键值间隔时间:");
+		LoopTime1 = new JLabel("键值间隔:");
 		LoopTime1.setBounds(boundsuserJPanel1.width / 50, LoopTimebounds.y,
 				(boundsuserJPanel1.width / 12) * 5,
 				boundsuserJPanel1.height / 12);
@@ -580,7 +580,7 @@ public class GUI_RegularKey_RegularTime extends JFrame implements Runnable{
 		LoopTime2 = new JLabel("单位秒,数值请>0");
 		LoopTime2.setBounds((boundsuserJPanel1.width / 3)
 				+ (boundsuserJPanel1.width / 10),
-				LoopTimebounds.y, boundsuserJPanel1.width / 3,
+				LoopTimebounds.y, boundsuserJPanel1.width / 2,
 				boundsuserJPanel1.height / 12);
 		LoopTime2.setFont(new Font("楷体", Font.BOLD| Font.ITALIC,
 				boundsuserJPanel1.height / 20));

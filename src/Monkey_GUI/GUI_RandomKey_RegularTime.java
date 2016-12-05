@@ -235,7 +235,7 @@ public class GUI_RandomKey_RegularTime extends JFrame implements Runnable {
 		SeleFolder.setForeground(new Color(0x43, 0x6E, 0xEE));
 		userJPanel.add(SeleFolder);
 
-		SeleFolder1 = new JLabel("请选择文件夹：");
+		SeleFolder1 = new JLabel("选择文件夹：");
 		SeleFolder1.setBounds(boundsuserJPanel.width / 50,
 				boundsuserJPanel.height / 10, boundsuserJPanel.width / 3,
 				(boundsuserJPanel.height / 100) * 45);

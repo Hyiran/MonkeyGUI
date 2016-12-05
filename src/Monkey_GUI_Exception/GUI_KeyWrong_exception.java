@@ -49,13 +49,13 @@ public class GUI_KeyWrong_exception extends JFrame {
 		Prompt1.setForeground(Color.RED);
 		add(Prompt1);
 
-		closeJButton = new JButton("关闭提示");
+		closeJButton = new JButton("关闭");
 		closeJButton.setBounds(bounds.x + bounds.width / 6, bounds.y
-				+ bounds.height / 3, (bounds.width / 30) * 3,
+				+ bounds.height / 3, (bounds.width / 30) * 4,
 				bounds.height / 13);
 		closeJButton.setContentAreaFilled(true);
 		// 此颜色值随便设置，只起占位作用，但是必须加上此句，否则不会出现透明背景效果。
-		closeJButton.setFont(new Font("楷体", Font.BOLD, bounds.height / 30));
+		closeJButton.setFont(new Font("楷体", Font.BOLD, bounds.height / 35));
 		closeJButton.setForeground(Color.BLUE);
 		closeJButton.setBackground(Color.WHITE);
 		closeJButton.setFocusPainted(false);
