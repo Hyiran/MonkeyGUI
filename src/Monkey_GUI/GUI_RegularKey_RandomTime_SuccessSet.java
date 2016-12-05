@@ -185,13 +185,13 @@ public class GUI_RegularKey_RandomTime_SuccessSet extends JFrame implements
 		LoopTi.setForeground(new Color(0x57, 0x57, 0x57));
 		userJPanel.add(LoopTi);
 
-		okJButton = new JButton("开始运行");
+		okJButton = new JButton("运行");
 		okJButton.setBounds(bounds.x + (bounds.width / 48) * 7, bounds.y
 				+ (bounds.height / 6) * 3, (bounds.width / 30) * 4,
 				(bounds.height / 30) * 2);
 		okJButton.setContentAreaFilled(true);
 		; // 此颜色值随便设置，只起占位作用，但是必须加上此句，否则不会出现透明背景效果。
-		okJButton.setFont(new Font("楷体", Font.BOLD, bounds.height / 20));
+		okJButton.setFont(new Font("楷体", Font.BOLD, bounds.height / 30));
 		okJButton.setForeground(Color.BLUE);
 		okJButton.setFocusPainted(false);
 		contentPane.add(okJButton);
@@ -203,13 +203,13 @@ public class GUI_RegularKey_RandomTime_SuccessSet extends JFrame implements
 		});
 
 		
-		cancelJButton = new JButton("取消返回");
+		cancelJButton = new JButton("返回");
 		cancelJButton.setBounds(bounds.x + (bounds.width / 48) * 13+(bounds.width / 30) * 4, bounds.y
 				+ (bounds.height / 6) * 3, (bounds.width / 30) * 4,
 				(bounds.height / 30) * 2);
 		cancelJButton.setContentAreaFilled(true);
 		; // 此颜色值随便设置，只起占位作用，但是必须加上此句，否则不会出现透明背景效果。
-		cancelJButton.setFont(new Font("楷体", Font.BOLD, bounds.height / 20));
+		cancelJButton.setFont(new Font("楷体", Font.BOLD, bounds.height / 30));
 		cancelJButton.setForeground(Color.BLUE);
 		cancelJButton.setFocusPainted(false);
 		contentPane.add(cancelJButton);
