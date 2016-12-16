@@ -34,8 +34,8 @@ public class GUI_Button_Monitor {
 
 	protected void RegularKey_RegularTime_OkJButtonActionPerformed(
 			ActionEvent event, String ToolsPath, String IP_Port,
-			String loopcount, int key, int Time, HashMap map, int TimeStart,
-			int TimeEND, String RegularTimeCode, GUI_RegularKey_RegularTime obj) {
+			String loopcount, int key, int Time, HashMap map, double TimeStart,
+			double TimeEND, String RegularTimeCode, GUI_RegularKey_RegularTime obj) {
 
 		Methods method = new Methods();
 		if (!IP_Port.contains(":")) {
@@ -89,7 +89,7 @@ public class GUI_Button_Monitor {
 			//close.setVisible(false);
 			int looptype = method.Looptype(loopcount);
 			int Loopcount = Integer.parseInt(loopcount);
-			int regulartimecode = Integer.parseInt(RegularTimeCode);
+			double regulartimecode = Double.parseDouble(RegularTimeCode);
 			Middle_param_Set middle_param_Set = new Middle_param_Set();
 			ToolsPath = ToolsPath + "\\";
 			middle_param_Set.param_set(ToolsPath, IP_Port, Loopcount, looptype,
@@ -206,7 +206,7 @@ public class GUI_Button_Monitor {
 			System.out.println("请至少填一个键值");
 		}
 
-		else if (Integer.valueOf(TimeStart)>=Integer.valueOf(TimeEND) ){
+		else if (Double.parseDouble(TimeStart)>=Double.parseDouble(TimeEND) ){
 			//close.setVisible(false);
 
 			System.out.println("请填写的时间范围前者小于后者");
@@ -217,9 +217,9 @@ public class GUI_Button_Monitor {
 			//close.setVisible(false);
 			int looptype = method.Looptype(loopcount);
 			int Loopcount = Integer.parseInt(loopcount);
-			int regulartimecode = Integer.parseInt(RegularTimeCode);
-			int StartTime = Integer.valueOf(TimeStart);
-			int EndTime = Integer.valueOf(TimeEND);
+			double regulartimecode = Double.parseDouble(RegularTimeCode);
+			double StartTime = Double.parseDouble(TimeStart);
+			double EndTime = Double.parseDouble(TimeEND);
 			Middle_param_Set middle_param_Set = new Middle_param_Set();
 			ToolsPath = ToolsPath + "\\";
 			middle_param_Set.param_set(ToolsPath, IP_Port, Loopcount, looptype,
@@ -292,9 +292,9 @@ public class GUI_Button_Monitor {
 			//close.setVisible(false);
 			int looptype = method.Looptype(loopcount);
 			int Loopcount = Integer.parseInt(loopcount);
-			int regulartimecode = Integer.parseInt(RegularTimeCode);
-			int StartTime = Integer.valueOf(TimeStart);
-			int EndTime = Integer.valueOf(TimeEND);
+			double regulartimecode = Double.parseDouble(RegularTimeCode);
+			double StartTime = Double.parseDouble(TimeStart);
+			double EndTime = Double.parseDouble(TimeEND);
 			Middle_param_Set middle_param_Set = new Middle_param_Set();
 			ToolsPath = ToolsPath + "\\";
 			middle_param_Set.param_set(ToolsPath, IP_Port, Loopcount, looptype,
@@ -396,9 +396,9 @@ public class GUI_Button_Monitor {
 			//close.setVisible(false);
 			int looptype = method.Looptype(loopcount);
 			int Loopcount = Integer.parseInt(loopcount);
-			int regulartimecode = Integer.parseInt(RegularTimeCode);
-			int StartTime = Integer.valueOf(TimeStart);
-			int EndTime = Integer.valueOf(TimeEND);
+			double regulartimecode = Double.parseDouble(RegularTimeCode);
+			double StartTime = Double.parseDouble(TimeStart);
+			double EndTime = Double.parseDouble(TimeEND);
 			Middle_param_Set middle_param_Set = new Middle_param_Set();
 			ToolsPath = ToolsPath + "\\";
 			middle_param_Set.param_set(ToolsPath, IP_Port, Loopcount, looptype,

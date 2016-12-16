@@ -22,10 +22,10 @@ public class Generate_Python_data {
 	int Key;
 	int Time;
 	// 固定键值、时间参数
-	int RegularTimeCode;
+	double RegularTimeCode;
 	// 固定键值随机时间,时间参数
-	int TimeStart;
-	int TimeEnd;
+	double TimeStart;
+	double TimeEnd;
 
 	public Generate_Python_data() {
 
@@ -121,7 +121,7 @@ public class Generate_Python_data {
 
 	// 固定键值，固定时间间隔操作生成Python操作
 	public String Python_Data_RegularKey_RegularTime(HashMap map,
-			int RegularTimeCode) {
+			double RegularTimeCode) {
 		String RegularTime = String.valueOf(RegularTimeCode);
 		for (int i = 1; i <= map.size(); i++) {
 			Python_KEY_TIME = Python_KEY_TIME + " device.press(" + map.get(i)
@@ -136,8 +136,8 @@ public class Generate_Python_data {
 	}
 
 	// 固定键值随机时间生成Python操作
-	public String Python_Data_RegularKey_RandomTime(HashMap map, int TimeStart,
-			int TimeEnd) {
+	public String Python_Data_RegularKey_RandomTime(HashMap map, double TimeStart,
+			double TimeEnd) {
 		String TimeS = String.valueOf(TimeStart);
 		String TimeE = String.valueOf(TimeEnd);
 		for (int i = 1; i <= map.size(); i++) {
@@ -148,7 +148,7 @@ public class Generate_Python_data {
 			
 
 		}
-		Python_KEY_TIME = " Ran=random.randint(" + TimeS + "," + TimeE + ")"
+		Python_KEY_TIME = " Ran=round(random.uniform(" + TimeS + "," + TimeE + "),9)"
 				+ "\n" + " print \"The \"+str(n)+\" loop\"" + "\n"
 				+ " print \"The last random time:\"+str(Ran)" + "\n"
 				+ Python_KEY_TIME + "\n";
@@ -157,7 +157,7 @@ public class Generate_Python_data {
 
 	// 随机键值固定时间生成Python操作
 	public String Python_Data_RandomKey_RegularTime(HashMap map,
-			int RegularTimeCode) {
+			double RegularTimeCode) {
 		String RegularTime = String.valueOf(RegularTimeCode);
 		String KeyList = "";
 		for (int i = 1; i <= map.size(); i++) {
@@ -178,8 +178,8 @@ public class Generate_Python_data {
 	}
 
 	// 随机键值随机时间生成Python操作
-	public String Python_Data_RandomKey_RandomTime(HashMap map, int TimeStart,
-			int TimeEnd) {
+	public String Python_Data_RandomKey_RandomTime(HashMap map, double TimeStart,
+			double TimeEnd) {
 		String TimeS = String.valueOf(TimeStart);
 		String TimeE = String.valueOf(TimeEnd);
 		String KeyList = "";
@@ -193,7 +193,7 @@ public class Generate_Python_data {
 				+ "\n" + " MonkeyRunner.sleep(RanTime)" + "\n";
 		KeyList = " list = {" + KeyList + "}" + "\n";
 		Python_KEY_TIME = " Ran=random.randint(1," + map.size() + ")" + "\n"
-				+ " RanTime=random.randint(" + TimeS + "," + TimeE + ")" + "\n"
+				+ " RanTime=round(random.uniform(" + TimeS + "," + TimeE + "),9)" + "\n"
 				+ KeyList + " print \"The \"+str(n)+\" loop\"" + "\n"
 				+ " print \"The \"+list[Ran]+\" Key\"" + "\n"
 				+ " print \"The Random time is\"+str(RanTime)" + "\n"

@@ -12,9 +12,9 @@ public class Middle_param {
 	public static int key;
 	public static int Time;
 	public static HashMap map ;
-	public static int TimeStart;
-	public static int TimeEND;
-	public static int RegularTimeCode;
+	public static double TimeStart;
+	public static double TimeEND;
+	public static double RegularTimeCode;
 	public static String getToolsPath() {
 		return ToolsPath;
 	}
@@ -71,29 +71,31 @@ public class Middle_param {
 		Middle_param.map = map;
 	}
 
-	public static int getTimeStart() {
+	public static double getTimeStart() {
 		return TimeStart;
 	}
 
-	public static void setTimeStart(int timeStart) {
+	public static void setTimeStart(double timeStart) {
 		TimeStart = timeStart;
 	}
 
-	public static int getTimeEND() {
+	public static double getTimeEND() {
 		return TimeEND;
 	}
 
-	public static void setTimeEND(int timeEND) {
+	public static void setTimeEND(double timeEND) {
 		TimeEND = timeEND;
 	}
 
-	public static int getRegularTimeCode() {
+	public static double getRegularTimeCode() {
 		return RegularTimeCode;
 	}
 
-	public static void setRegularTimeCode(int regularTimeCode) {
+	public static void setRegularTimeCode(double regularTimeCode) {
 		RegularTimeCode = regularTimeCode;
 	}
+
+	
 
 
 	

@@ -5,8 +5,8 @@ import java.util.HashMap;
 public class Middle_param_Set {
 
 	public void param_set(String ToolsPath, String Ip_Port, int loopcount,
-			int looptype, int key, int Time, HashMap map, int TimeStart,
-			int TimeEND,int RegularTimeCode) {
+			int looptype, int key, int Time, HashMap map, Double TimeStart,
+			Double TimeEND,Double RegularTimeCode) {
 	
 		Middle_param.setToolsPath(ToolsPath);
 		Middle_param.setIp_Port(Ip_Port);

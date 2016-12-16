@@ -46,6 +46,7 @@ public class Middle_Open_BoxLog implements Runnable{
         	//System.out.println("cmd /k adb logcat -v time *:V > "+Toolspath);
 		    InputStream inStream = rt.exec("cmd /k adb root && adb remount && adb logcat -v time *:V && echo logcat Over").getInputStream();//打开boxlog
 
+		    System.out.println("log输出命令为: adb logcat -v time *:V");
         	BufferedReader input;
     		try {
     			File file = new File(BoxLogpath);

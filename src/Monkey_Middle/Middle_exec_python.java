@@ -62,9 +62,11 @@ public class Middle_exec_python implements Runnable {
 			if (proc != null) {
 				proc.destroy();
 			}
-			proc = runtime.exec("cmd /k echo on && adb disconnect " + IP_Port
+/*			proc = runtime.exec("cmd /k echo on && adb disconnect " + IP_Port
 					+ "&& adb connect " + IP_Port + " && monkeyrunner "
-					+ ToolsPath +"&& echo CMDOUT");
+					+ ToolsPath +" && echo CMDOUT");*/
+			proc = runtime.exec("cmd /k echo on && adb disconnect && adb connect " + IP_Port + " && monkeyrunner "
+					+ ToolsPath +" && echo CMDOUT");
 			InputStream inputStream = proc.getInputStream();
 			InputStream errorStream = proc.getErrorStream();
 			setLogWrite(true);
