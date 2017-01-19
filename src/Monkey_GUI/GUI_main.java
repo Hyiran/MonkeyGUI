@@ -188,7 +188,7 @@ public class GUI_main extends JFrame {
 		pictureJLabel.setIcon(new ImageIcon(imgbackgroundbig));
 		contentPane.add(pictureJLabel);
 
-		setTitle("欢迎使用安卓GUI测试工具-V1.3.2");
+		setTitle("欢迎使用安卓GUI测试工具-V1.3.3");
 		// setSize(380, 350);
 		setBounds(bounds.x + bounds.width / 6, bounds.y + bounds.height / 10,
 				(bounds.width / 3) * 2, (bounds.height / 5) * 4);
