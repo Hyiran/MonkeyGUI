@@ -59,33 +59,70 @@ public class GUI_Close extends JFrame implements Runnable {
 		System.out.println("窗口总大小：" + bounds.x + "   " + bounds.y + "   "
 				+ bounds.width + "   " + bounds.height);
 
+		//设置类型
+		String SetType = "";
+		int key = Middle_param.getKey();
+		int time = Middle_param.getTime();
+		System.out.println("key= "+key+" time="+time);
+		if (key ==0 && time == 0) {
+			SetType = "随机键值随机时间";
+		}else if (key ==0 && time == 1) {
+			SetType = "随机键值固定时间";
+		}else if (key ==1 && time == 0) {
+			SetType = "固定键值随机时间";
+		}else if (key ==1 && time == 1) {
+			SetType = "固定键值固定时间";
+		}
+		
 		// 提示
-		String prom = "无限循环";
+		String prom = "无限循环,"+ SetType;
 		if (Middle_param.getLoopcount()>0) {
-			prom ="循环"+Middle_param.getLoopcount()+"次 ";
+			prom ="循环"+Middle_param.getLoopcount()+"次,"+ SetType;
 		}
 		Prompt = new JLabel("友情提示：程序正在运行,"+prom);
 		Prompt.setBounds(bounds.x + bounds.width / 29, bounds.y , bounds.width, bounds.height / 13);
-		Prompt.setFont(new Font("楷体", Font.BOLD, bounds.height / 28));
+		Prompt.setFont(new Font("楷体", Font.BOLD, bounds.height / 35));
 		Prompt.setForeground(new Color(0x57, 0x57, 0x57));
 		add(Prompt);
+		// 取的键值
+				HashMap Map = new HashMap();
+				String MapValue = "";
+				Map = Middle_param.getMap();
+				for (int i = 1; i <= Map.size(); i++) {
+					MapValue = MapValue
+							+ method.HashKeyget(Monkey_KEY.SetMapKey(), Map.get(i))
+									.toString() + "+";
+				}
+				MapValue = MapValue.substring(0, MapValue.lastIndexOf("+"));
+				int position = MapValue.length();
+				String KeySetStr1;
+				String KeySetStr2;
+				if (MapValue.length() > 45) {
+					String temp = MapValue.substring(0, 43);
+					position = temp.lastIndexOf("+");
+					KeySetStr1 = MapValue.substring(0, position);
+					KeySetStr2 = MapValue.substring(position);
+				} else {
 
+					KeySetStr1 = MapValue;
+					KeySetStr2 = "";
+				}
 		// 提示
-		Prompt1 = new JLabel("若运行中途点击退出程序，建议cmd重连下adb再运行程序~" );
+		Prompt1 = new JLabel("执行的键值为：" + KeySetStr1);
 		Prompt1.setBounds(bounds.x + bounds.width / 29, bounds.y
 				+ bounds.height / 20, bounds.width, bounds.height / 13);
 		Prompt1.setFont(new Font("楷体", Font.BOLD, bounds.height / 40));
 		Prompt1.setForeground(new Color(0x57, 0x57, 0x57));
 		add(Prompt1);
 		// 提示
-		Prompt2 = new JLabel("一般1分钟以内盒端即可响应，若您上次在此运行中关闭程序");
+		Prompt2 = new JLabel(KeySetStr2);
 		Prompt2.setBounds(bounds.x + bounds.width / 29, bounds.y
 				+ bounds.height / 13, bounds.width, bounds.height / 13);
 		Prompt2.setFont(new Font("楷体", Font.BOLD, bounds.height / 40));
 		Prompt2.setForeground(new Color(0x57, 0x57, 0x57));
 		add(Prompt2);
 		// 提示
-		Prompt2 = new JLabel("请耐心等待5分钟，若盒端无反应，请关闭后再重启程序");
+		Prompt2 = new JLabel("请耐心等待2分钟，若盒端无反应，请关闭后再重启程序");
 		Prompt2.setBounds(bounds.x + bounds.width / 29, bounds.y
 						+ bounds.height / 10, bounds.width, bounds.height / 13);
 		Prompt2.setFont(new Font("楷体", Font.BOLD, bounds.height / 40));
